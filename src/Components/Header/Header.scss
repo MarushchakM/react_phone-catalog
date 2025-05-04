@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.top-bar {
+  display: flex;
+  border-bottom: 1px solid $grey-color;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  .menu {
+    display: none;
+    @include on-tablet {
+      display: block;
+    }
+  }
+  &__wrap{
+    display: flex;
+  }
+  &__link-logo{
+    padding: 10px 16px;
+  }
+  &__logo{
+    display: block;
+  }
+  &__menu-action{
+    border-left: 1px solid $grey-color;
+    padding: 16px;
+    @include on-tablet {
+      display: none;
+    }
+  }
+  &-link{
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+  &__link{
+    width: 16px;
+    height: 16px;
+    display: block;
+    &--hamburger{
+      background-image: url('/img/menu.png');
+    }
+    &--close{
+      background-image: url('/img/close.png');
+    }
+  }
+}

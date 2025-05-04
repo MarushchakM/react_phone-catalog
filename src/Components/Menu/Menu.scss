@@ -1,0 +1,21 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+  padding-top: 72px;
+  &__item{
+    margin-bottom: 16px;
+  a{
+      font-weight: 800;
+      color: $text-light-grey-color;
+      font-size: 12px;
+      letter-spacing: 4%;
+      line-height: 11px;
+      text-transform: uppercase;
+    }
+  }
+}

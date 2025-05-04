@@ -1,0 +1,45 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.aside-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #FFF;
+  transform: translateX(-100%);
+  transition-duration: $duration;
+  pointer-events: none;
+  overflow: auto;
+  padding-bottom: 40px;
+  &:target {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+  @include on-tablet {
+    display: none;
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-color;
+  }
+  &__link-logo{
+    padding: 10px 16px;
+  }
+  &__logo{
+    display: block;
+  }
+  &__close{
+    border-left: 1px solid $grey-color;
+    padding: 16px;
+    &-link{
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-image: url('/img/close.png');
+    }
+  }
+}
+

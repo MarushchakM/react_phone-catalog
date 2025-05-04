@@ -1,1 +1,48 @@
-// not empty
+@import './styles/mixins';
+@import './styles/variables';
+
+@font-face {
+  font-family: Mont-Bold;
+  src: url('/fonts/Mont-Regular.otf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: Mont-Bold;
+  src: url('/fonts/Mont-SemiBold.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Mont-Bold;
+  src: url('/fonts/Mont-Bold.otf');
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Mont-Bold, sans-serif;
+}
+
+.container {
+  min-width: 320px;
+  padding: 100px 16px;
+  margin: 0 auto;
+  height: 100%;
+  @include on-tablet {
+    padding: 0 24px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
