@@ -1,0 +1,32 @@
+@import '../../../../styles/variables';
+
+.mainSliderItem{
+  width: $sizeMainSlider;
+  height: 100%;
+  padding-top: 40px;
+  text-align: center;
+  &__description{
+    background: linear-gradient(to right, #891CE8, #7560FA, #E963FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-size: 8vw;
+    padding: 0 50px;
+    line-height: 106%;
+    margin-bottom: 40px;
+  }
+  &__title{
+    color: #fff;
+    font-size: 10vw;
+    margin-bottom: 8px;
+  }
+  &__subtitle{
+    color: $primary-grey-color;
+    font-size: 6vw;
+    margin-bottom: 40px;
+    display: block;
+  }
+  &__img{
+    width: 70%;
+  }
+}

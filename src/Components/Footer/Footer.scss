@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.footer {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 12px;
+  color: $text-light-grey-color;
+  border-top: 1px solid $grey-color;
+  @include on-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    a{
+      color: $text-light-grey-color;
+    }
+    @include on-tablet {
+      flex-direction: row;
+    }
+    @include on-desc {
+      gap: 104px;
+    }
+  }
+  &__action{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    @include on-tablet {
+      width: auto;
+    }
+    a{
+      background-image: url('img/top-arrow.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid $grey-color;
+      width: 32px;
+      height: 32px;
+      display: block;
+      font-weight: 700px;
+    }
+  }
+}

@@ -19,12 +19,11 @@ export const Menu = () => {
         ))}
       </ul>
       <div className="menu__actions">
-        <NavLink to="/favorites" className="menu__icon--favorite">
-          favorites
-        </NavLink>
-        <NavLink to="/cart" className="menu__icon--cart">
-          cart
-        </NavLink>
+        <NavLink
+          to="/favorites"
+          className="menu__action menu__action--favorite"
+        />
+        <NavLink to="/cart" className="menu__action menu__action--cart" />
       </div>
     </nav>
   );

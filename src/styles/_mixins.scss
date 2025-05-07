@@ -1,6 +1,12 @@
 @import './variables';
+
 @mixin on-tablet {
   @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+@mixin on-desc {
+  @media (min-width: $desc-min-width) {
     @content;
   }
 }

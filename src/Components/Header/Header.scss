@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
+
 .top-bar {
   display: flex;
   border-bottom: 1px solid $grey-color;
@@ -9,37 +10,49 @@
   top: 0;
   left: 0;
   right: 0;
+  background-color: #fff;
+
+  @include on-tablet {
+    gap: 32px;
+  }
+  @include on-desc {
+    gap: 48px;
+  }
   .menu {
     display: none;
+
     @include on-tablet {
-      display: block;
+      display: flex;
+      gap: 48px;
     }
   }
   &__wrap{
     display: flex;
+
+    align-items: center;
   }
   &__link-logo{
     padding: 10px 16px;
+    display: block;
   }
   &__logo{
-    display: block;
+    display: flex;
+    justify-content: center;
   }
   &__menu-action{
     border-left: 1px solid $grey-color;
     padding: 16px;
+
     @include on-tablet {
       display: none;
     }
-  }
-  &-link{
-    width: 16px;
-    height: 16px;
-    display: block;
   }
   &__link{
     width: 16px;
     height: 16px;
     display: block;
+    border: none;
+    background-color: transparent;
     &--hamburger{
       background-image: url('/img/menu.png');
     }

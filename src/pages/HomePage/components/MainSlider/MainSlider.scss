@@ -1,0 +1,36 @@
+@import '../../../../styles/variables';
+
+.mainSlider{
+  &__block{
+    padding-bottom: $sizeMainSlider;
+    position: relative;
+    margin-left: -16px;
+    margin-right: -16px;
+    overflow: hidden;
+  }
+  &__wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: #000;
+    display: flex;
+  }
+  &__dotes{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  &__dote{
+    width: 14px;
+    height: 4px;
+    background-color: $grey-color;
+    border: none;
+    cursor: pointer;
+    &--active{
+      background-color: $primary-grey-color;
+    }
+  }
+}
+
