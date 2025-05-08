@@ -1,10 +1,28 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .mainSliderItem{
   width: $sizeMainSlider;
   height: 100%;
   padding-top: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include on-tablet {
+    flex-direction: row;
+    padding: 0;
+    align-items: stretch;
+  }
+  &__action{
+    @include on-tablet {
+      background-color: #222222;
+      border-radius: 48px;
+      margin: 24px;
+      padding: 46px;
+    }
+  }
   &__description{
     background: linear-gradient(to right, #891CE8, #7560FA, #E963FF);
     -webkit-background-clip: text;
@@ -13,20 +31,51 @@
     font-size: 8vw;
     padding: 0 50px;
     line-height: 106%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    @include on-tablet {
+      font-size: 4vw;
+      padding: 0;
+    }
+  }
+  &__first{
+    display: none;
+    @include on-tablet {
+      display: block;
+    }
+  }
+  &__btn{
+    display: none;
+  }
+  &__goods{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   &__title{
     color: #fff;
     font-size: 10vw;
     margin-bottom: 8px;
+    @include on-tablet {
+      font-size: 4vw;
+      padding: 0;
+      margin-top: 40px;
+    }
   }
   &__subtitle{
     color: $primary-grey-color;
     font-size: 6vw;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     display: block;
+    @include on-tablet {
+      font-size: 2vw;
+      padding: 0;
+    }
   }
   &__img{
     width: 70%;
+    @include on-tablet {
+      width: 60%;
+    }
   }
 }

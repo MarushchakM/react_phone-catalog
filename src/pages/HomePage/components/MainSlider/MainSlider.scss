@@ -1,20 +1,21 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .mainSlider{
-  &__block{
-    padding-bottom: $sizeMainSlider;
+  margin-left: -16px;
+  margin-right: -16px;
+  // overflow: hidden;
+  @include on-tablet {
+    margin: 0 50px;
     position: relative;
-    margin-left: -16px;
-    margin-right: -16px;
-    overflow: hidden;
   }
-  &__wrapper{
-    position: absolute;
-    left: 0;
-    top: 0;
 
+  &__block{
+    aspect-ratio: 1 / 1;
     background-color: #000;
-    display: flex;
+    @include on-tablet {
+      aspect-ratio: 0;
+    }
   }
   &__dotes{
     display: flex;
@@ -22,15 +23,33 @@
     gap: 14px;
     margin-top: 18px;
   }
-  &__dote{
-    width: 14px;
-    height: 4px;
-    background-color: $grey-color;
-    border: none;
-    cursor: pointer;
-    &--active{
-      background-color: $primary-grey-color;
-    }
+
+}
+
+.swiper-pagination-bullet{
+  width: 14px;
+  height: 4px;
+  background-color: $grey-color;
+  border: none;
+  cursor: pointer;
+  &-active{
+    background-color: $primary-grey-color;
   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 32px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+.swiper-button-prev{
+  left: -50px;
+}
+.swiper-button-next{
+  right: -50px;
 }
 

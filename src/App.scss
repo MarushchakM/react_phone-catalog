@@ -39,11 +39,10 @@ body {
 .container {
   min-width: 320px;
   padding: 72px 16px 0;
-  margin: 0 auto;
   flex-grow: 1;
 
   @include on-tablet {
-    padding: 0 24px;
+    padding: 80px 24px 0;
   }
 }
 
@@ -68,6 +67,10 @@ h2{
   font-size: 32px;
   line-height: 41px;
   letter-spacing: -1%;
+  @include on-tablet {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 h4{
